@@ -38,7 +38,7 @@ public class WsController implements WsInterface{
 		String hoy = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date()); // HH(24), hh(12)
 		Map<String, Object> result = new HashMap<>();
 		try {
-			log.info("WsController.validarToken Start");
+			log.info("WsController.validarToken Start Comentario");
 			result.put("tokenValido", true);
 			result.put("user", getUser());
 			log.info("WsController.validarToken End");
