@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="RoboLocalizadorMapper">
+
+	<resultMap id="UsuariosMap" type="Usuarios">
+	    <result property="id" column="Id" />
+		<result property="username" column="Username" />
+		<result property="password" column="Password" />
+		<result property="activo" column="Activo" />
+		<result property="aplicacion" column="Aplicacion" />
+	</resultMap>
+	
+	<resultMap id="UsuarioMap" type="Usuario">
+	    <result property="id" column="Id" />
+		<result property="username" column="Username" />
+		<result property="password" column="Password" />
+		<result property="activo" column="Activo" />
+		<result property="aplicacion" column="Aplicacion" />
+		<result property="fechaRegistro" column="fechaRegistro" />
+	</resultMap>
+	
+	
+	
+	<select id="getUsuario" resultMap="UsuariosMap">
+		 SELECT ID, USERNAME , PASSWORD, ACTIVO, APLICACION, FECHAREGISTRO
+    		FROM  USUARIOS
+    		WHERE USERNAME=#{username,jdbcType=VARCHAR}
+	</select>
+	
+	<insert id="insertUser" parameterType="Usuario" statementType="CALLABLE" useGeneratedKeys="true">
+		BEGIN
+			INSERT INTO USUARIOS (
+				USERNAME,PASSWORD,ACTIVO,APLICACION
+			) VALUES (
+				#{username,jdbcType=VARCHAR},
+				#{password,jdbcType=VARCHAR},
+				#{esactivo,jdbcType=VARCHAR},
+				#{aplicacion,jdbcType=VARCHAR}
+			)
+			RETURNING ID INTO #{id,mode=OUT,jdbcType=INTEGER}; 
+		END;
+	</insert>
+	
+</mapper>

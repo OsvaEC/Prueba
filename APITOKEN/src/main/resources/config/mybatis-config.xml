@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="lazyLoadingEnabled" value="false" />
+		<setting name="defaultStatementTimeout" value="25" />
+	</settings>
+	
+	<typeAliases>
+		<typeAlias alias="Usuarios" type="com.qualitas.mx.security.model.Usuarios" />
+		<typeAlias alias="Usuario" type="com.qualitas.mx.security.model.UsuarioModel" />
+	</typeAliases>	
+	
+
+	<mappers>
+		<mapper resource="dao/maps/RoboMap.xml" />
+	</mappers>
+
+</configuration>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.4/weblogic-web-app.xsd"> 
+	<container-descriptor>
+		<prefer-web-inf-classes>true</prefer-web-inf-classes>
+<!-- 		<prefer-application-packages> -->
+<!-- 			<package-name>org.springframework.*</package-name> -->
+<!-- 			<package-name>com.fasterxml.jackson.*</package-name> -->
+<!-- 			<package-name>org.slf4j.*</package-name> -->
+<!-- 			<package-name>io.jsonwebtoken.*</package-name> -->
+<!-- 		</prefer-application-packages> -->
+<!-- 		<prefer-application-resources> -->
+<!-- 			<resource-name>org.springframework.*</resource-name> -->
+<!-- 			<resource-name>com.fasterxml.jackson.*</resource-name> -->
+<!-- 			<resource-name>org.slf4j.*</resource-name> -->
+<!-- 			<resource-name>io.jsonwebtoken.*</resource-name> -->
+<!-- 		</prefer-application-resources> -->
+		<optimistic-serialization>true</optimistic-serialization>
+		<show-archived-real-path-enabled>true</show-archived-real-path-enabled>
+	</container-descriptor>
+<!-- 	<jsp-descriptor> -->
+<!-- 		<precompile>true</precompile> -->
+<!-- 	</jsp-descriptor> -->
+    <context-root>/SalvamentosAQQAPI</context-root> 
+</weblogic-web-app>
